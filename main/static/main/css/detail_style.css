@@ -1,0 +1,131 @@
+html, body {
+    height: 100%;
+    width: 100%; 
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(99, 112, 225, 1), rgba(166, 173, 234, 1)) no-repeat;
+
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 12;
+}
+
+
+header {
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.main_page {
+    margin-left: 50px;
+}
+
+.logo {
+    padding-top: 10px;
+}
+
+.two_btns {
+
+    display: flex;
+
+
+    width: 300px;
+}
+
+.btn_write_article {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 10px;
+
+    width: 175px;
+    height: 40px;
+
+    color: white;
+    background-color: rgba(121, 132, 237, 1);
+    border-radius: 27px;
+
+    transition: 0.3s;
+}
+
+.btn_log_in {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100px;
+    height: 40px;
+
+    color: white;
+    background-color: rgba(99, 112, 225, 1);
+    border-radius: 27px;
+
+    transition: 0.3s;
+}
+
+
+.btn_log_in:hover {
+    background-color: rgba(80, 91, 184, 1);
+}
+
+.btn_write_article:hover {
+    background-color: rgba(80, 91, 184, 1);
+}
+
+.articles_field {
+    width: 1000px;
+    height: 600px;
+
+    background-color: white;
+    border-radius: 15px;
+
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+.article_title {
+    padding-top: 3px;
+    font-weight: 700;
+    font-size: 35px;
+
+    display: flex;
+  justify-content: center;
+}
+
+.article_text {
+    text-align: center;
+    height: 450px;
+    overflow: auto;
+}
+
+.meta_data_article {
+    position: absolute;
+    bottom: 30px;
+    margin-left: 10px;
+    color: grey;
+}
+
+
+a {
+    color: blue;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: blueviolet;
+}
+
+.not_authorized {
+    text-align: center;
+    padding-top: 275px;
+}

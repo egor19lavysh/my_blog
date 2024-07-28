@@ -1,0 +1,36 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+
+{% block link%}
+
+<link rel="stylesheet" href="{% static 'main/css/detail_style.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+
+    <div class="article_title">
+        {{ article.title }}
+    </div>
+
+    <div class="article_text">
+        {{ article.text }}
+    </div>
+
+    <div class="meta_data_article">
+        Author: {{ article.author }} <br>
+        publishing date: {{ article.publishing_date }}
+    </div>
+
+{% else %}
+
+<div class="not_authorized">
+You should <a href="{% url "users:login" %}"> log in </a> or <a href="{% url "users:register" %}"> sign up </a> on our blog in order to read articles
+</div>
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'users/css/login_style.css' %}">
+{% endblock link %}
+
+{% block content %}
+<h1> Authorization <h1>
+
+{% for message in messages %}
+<div class="message {{ message.tags }}">
+    {{ message }}
+</div>
+{% endfor %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p><button type="submit"> log in </button></p>
+</form>
+
+<p> If yoy have not an account on our blog, you may <a class="authorization" href="{% url "users:register"%}"> <span> sign up </span> </a> </p>
+
+{% endblock content %}

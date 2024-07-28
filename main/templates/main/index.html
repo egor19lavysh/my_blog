@@ -1,0 +1,54 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+
+{% block link%}
+
+<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="articles">
+    <ul class="articles_list">
+        {% for obj in page_obj %}
+        {% csrf_token %}
+
+        <li class="article">
+                                
+            <a href="{% url "main:detail" obj.id %}" class="detail_article">
+            <div class="article">
+            
+            <div class="article_title">{{obj.title}}</div>
+            <div class="author">{{obj.author}}</div>
+            <div class="publishing_date">{{obj.publishing_date}}</div>
+        
+            </div>
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+</div>
+
+{% endblock %}
+
+{% block pagination %}
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a class="pag_tap" href="?page=1">&laquo; first</a>
+            <a class="pag_tap" href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+            <a class="pag_tap" href="?page={{ page_obj.next_page_number }}">next</a>
+            <a class="pag_tap" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock pagination %}

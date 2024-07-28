@@ -1,0 +1,40 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'write/css/write_style.css' %}">
+{% endblock link %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+
+<h1> Write the article </h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+    <p>
+		{% if field.errors %}
+		<ul class="errorlist">
+			{% for error in field.errors %}
+			<li>{{ error }}</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+	 	{{ field.label_tag }} {{ field }}
+	</p>
+
+    {% endfor %}
+    <p><button type="submit"> publish </button></p>
+
+	{% else %}
+
+	<div class="not_authorized">
+		You should <a href="{% url "users:login" %}"> log in </a> or <a href="{% url "users:register" %}"> sign up </a> on our blog in order to write articles
+	</div>
+
+	{% endif %}
+
+{% endblock content %}

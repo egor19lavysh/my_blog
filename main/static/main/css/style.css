@@ -1,0 +1,148 @@
+html, body {
+    height: 100%;
+    width: 100%; 
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(99, 112, 225, 1), rgba(166, 173, 234, 1)) no-repeat;
+
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 12;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.main_page {
+    margin-left: 50px;
+}
+
+.logo {
+    padding-top: 10px;
+}
+
+.two_btns {
+
+    display: flex;
+
+
+    width: 300px;
+}
+
+.btn_write_article {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 10px;
+
+    width: 175px;
+    height: 40px;
+
+    color: white;
+    background-color: rgba(121, 132, 237, 1);
+    border-radius: 27px;
+
+    transition: 0.3s;
+}
+
+.btn_log_in {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100px;
+    height: 40px;
+
+    color: white;
+    background-color: rgba(99, 112, 225, 1);
+    border-radius: 27px;
+
+    transition: 0.3s;
+}
+
+
+.btn_log_in:hover {
+    background-color: rgba(80, 91, 184, 1);
+}
+
+.btn_write_article:hover {
+    background-color: rgba(80, 91, 184, 1);
+}
+
+.articles_field {
+    width: 1000px;
+    height: 600px;
+
+    background-color: white;
+    border-radius: 15px;
+
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+li {
+    list-style-type: none; 
+    
+}
+
+.article {
+    width: 925px;
+    height: 100px;
+
+    background-color: rgba(236, 236, 236, 1);
+    border-radius: 10px;
+
+    padding-left: 10px;
+    padding-top: 0.0px;
+}
+
+.article_title {
+    padding-top: 3px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.author, .publishing_date {
+    color: rgba(130, 130, 130, 1);
+}
+
+.author {
+    margin-top: 20px;
+}
+
+.articles {
+    padding-top: 10px;
+}
+
+.articles_list li {
+    margin: 10px 0;
+}
+
+a {
+    color: black;
+}
+
+.pag_tap {
+    color: black;
+    transition: 0.3s;
+}
+
+.pag_tap:hover {
+    color: white
+}
